@@ -1,0 +1,20 @@
+language: php
+
+arch:
+  - amd64
+  - arm64
+
+php:
+  - '7.4'
+  - nightly
+
+env:
+  - REPORT_EXIT_STATUS=1 NO_INTERACTION=1
+
+before_script:
+  - composer install
+
+script:
+  - ./vendor/bin/phpstan analyse -n -vvv --ansi --level=max src
+  - ./vendor/bin/psalm --show-info=true
+  - ./vendor/bin/phpunit --debug

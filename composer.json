@@ -1,0 +1,42 @@
+{
+  "name": "rtckit/pcap",
+  "description": "PHP Network Packet Encoding/Decoding Library",
+  "version": "0.4.0",
+  "type": "library",
+  "keywords": [
+    "packet",
+    "capture",
+    "pcap",
+    "ethernet",
+    "arp",
+    "icmp"
+  ],
+  "homepage": "https://github.com/rtckit/php-pcap",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ciprian Dosoftei"
+    }
+  ],
+  "support": {
+    "email": "hello@rtckit.io",
+    "issues": "https://github.com/rtckit/php-pcap/issues"
+  },
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3",
+    "vimeo/psalm": "^3.15",
+    "phpstan/phpstan": "^0.12"
+  },
+  "suggest": {
+    "ext-pcap": "Packet capture extension",
+    "rtckit/pcap-ffi": "Packet capture library (via FFI)"
+  },
+  "autoload": {
+    "psr-4": {
+      "RTCKit\\Pcap\\": "src/"
+    }
+  }
+}
