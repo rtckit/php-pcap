@@ -6,7 +6,7 @@ arch:
 
 php:
   - '7.4'
-  - nightly
+# - nightly
 
 env:
   - REPORT_EXIT_STATUS=1 NO_INTERACTION=1
