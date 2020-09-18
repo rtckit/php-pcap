@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace RTCKit\Pcap;
+namespace RTCKit\Pcap\Frame;
 
-abstract class LinkPacket
+abstract class AbstractLink
 {
     /**
      * IEEE 802.3 Ethernet encapsulation
@@ -21,4 +21,17 @@ abstract class LinkPacket
      * @int DLT_LINUX_SLL
      */
     public const LINKTYPE_LINUX_SLL = 113;
+
+    /**
+     * @var array Link type IDs mapped against their respective classes
+     */
+    public const LINKTYPES = [
+        self::LINKTYPE_ETHERNET => Ethernet::class,
+        self::LINKTYPE_LINUX_SLL => Linux::class,
+    ];
+
+    /**
+     * @var ?Packet Raw packet which encapsulates this frame
+     */
+    public ?Packet $packet = null;
 }

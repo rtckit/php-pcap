@@ -4,6 +4,12 @@ arch:
   - amd64
   - arm64
 
+addons:
+  apt:
+    packages:
+      - dnsutils
+      - libpcap-dev
+
 php:
   - '7.4'
 # - nightly
