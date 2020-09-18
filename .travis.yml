@@ -18,8 +18,7 @@ env:
   - REPORT_EXIT_STATUS=1 NO_INTERACTION=1
 
 before_script:
-  - pear update-channels
-  - pecl install --force ffi
+  - pecl install channel://pecl.php.net/ffi-0.3
   - composer install
 
 script:
